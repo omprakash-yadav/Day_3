@@ -1,0 +1,121 @@
+1. For the given JSON iterate over all for loops (for, for in, for of, forEach)
+
+
+var obj = [
+    { person: "Name 1", age: "2", company: "GUVI" },
+    { person: "Name 2", age: "5", company: "GUVI geek" },
+    { person: "Name 3", age: "8", company: "GUVI geek network" },
+];
+for (let i = 0; i < obj.length; i++) {
+    console.log(`
+    person: ${obj[i].person}
+    age: ${obj[i].age}
+    company: ${obj[i].company} `);
+}
+console.log("#################");
+for (let key in obj) {
+    console.log(` 
+    person:${obj[key].person}
+    age:${obj[key].age}
+    company:${obj[key].company}`);
+}
+console.log("$$$$$$$$$$$$$$$$");
+for (let key of obj) {
+    console.log(`
+    person: ${key.person}
+    age: ${key.age}
+    company: ${key.company}`);
+}
+console.log("@@@@@@@@@@@@@@@@@");
+obj.forEach(function (key) {
+    console.log(`
+      person:${key.person}
+      age:${key.age}
+      company:${key.company}`)
+});
+
+
+output=>
+
+PS C:\Users\Omprakash\Desktop\Node-js-TUT\genClases\GenHomeWork> node .\AllForloopsItretor.js
+
+    person: Name 1
+    age: 2
+    company: GUVI
+
+    person: Name 2
+    age: 5
+    company: GUVI geek
+
+    person: Name 3
+    age: 8
+    company: GUVI geek network
+#################
+
+    person:Name 1
+    age:2
+    company:GUVI
+
+    person:Name 2
+    age:5
+    company:GUVI geek
+
+    person:Name 3
+    age:8
+    company:GUVI geek network
+$$$$$$$$$$$$$$$$
+
+    person: Name 1
+    age: 2
+    company: GUVI
+
+    person: Name 2
+    age: 5
+    company: GUVI geek
+
+    person: Name 3
+    age: 8
+    company: GUVI geek network
+@@@@@@@@@@@@@@@@@
+
+      person:Name 1
+      age:2
+      company:GUVI
+
+      person:Name 2
+      age:5
+      company:GUVI geek
+
+      person:Name 3
+      age:8
+      company:GUVI geek network
+2. Create your own resume data in JSON format
+
+let Resume = [{
+    Name: "omprakash yadav",
+    Age: 23,
+    Collage: "Bharath University",
+    PassingYear: 2019,
+    Stream: "CSE",
+    ParsentAddress: "Bommanhali Bangalore",
+
+}];
+for (let key of Resume) {
+    console.log(`
+    Name : ${key.Name}
+    Age : ${key.Age}
+    Collage : ${key.Collage}
+    passingYear : ${key.PassingYear}
+    Stream : ${key.Stream}
+    LarsentAdres : ${key.ParsentAddress}`);
+}
+
+
+output=>
+PS C:\Users\Omprakash\Desktop\Node-js-TUT\genClases\GenHomeWork> node .\ResumJESON.js
+
+    Age:23
+    Collage:Bharath University
+    passingYear:2019
+    Stream:CSE
+    LarsentAdres:Bommanhali Bangalore
